@@ -25,9 +25,11 @@ By identifying these segments, the business can prioritize retention, re-engagem
 
 ## Dataset
 
-**Source:** [UCI Machine Learning Repository — Online Retail Dataset](https://archive.ics.uci.edu/dataset/352/online+retail)
+**Source:** [E-Commerce Data — Online Retail Transactions, Kaggle](https://www.kaggle.com/datasets/carrie1/ecommerce-data)
 
-A transactional dataset from a UK-based online retailer covering all purchases between December 2010 and December 2011.
+A transactional dataset from a UK-based online retailer covering all purchases between December 2010 and December 2011. Originally sourced from the UCI Machine Learning Repository.
+
+> **Note:** The raw and intermediate cleaned CSVs are not included in this repo due to file size (500K+ rows). Download the raw data from the Kaggle link above, then run `01_data_cleaning_eda.ipynb` followed by `02_rfm_segmentation.ipynb` to reproduce the full pipeline. The final output — `rfm_customer_segmented.csv` (4,338 rows) — is included in this repo.
 
 | Stage | Rows | Columns | Notes |
 |---|---|---|---|
@@ -260,13 +262,13 @@ A priority-based rule engine maps RFM scores to business segments — highest-va
 
 | File | Description |
 |---|---|
-| `data.csv` | Raw dataset (UCI Online Retail) |
-| `rfm_cleaned.csv` | Cleaned dataset after Phase 1 |
-| `rfm_customer_segmented.csv` | Final RFM-scored and segmented dataset |
+| `rfm_customer_segmented.csv` | Final RFM-scored and segmented dataset (4,338 rows) — included in this repo |
 | `01_data_cleaning_eda.ipynb` | Phase 1 — Data cleaning and EDA notebook |
 | `02_rfm_segmentation.ipynb` | Phase 2 — RFM calculation and segmentation notebook |
 | `rfm_dashboard.pbix` | Power BI dashboard file |
 | `rfm_sql_analysis.sql` | MySQL queries (8 business questions) |
+
+> Raw data (`data.csv`) and the intermediate cleaned file (`rfm_cleaned.csv`) are not hosted in this repo due to size — see the [Dataset](#dataset) section above for the source link and instructions to regenerate them.
 
 ---
 
